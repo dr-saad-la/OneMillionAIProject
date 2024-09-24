@@ -157,8 +157,10 @@ cython_debug/
 
 
 # Mac OS
-.DS_Store 
+.DS_Store
 
+# Ignore Catboost Files
+catboost_info
 
 
 
