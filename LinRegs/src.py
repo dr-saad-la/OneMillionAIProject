@@ -1,5 +1,5 @@
 """
-    This module contains a set of function to perform salary predictions project. 
+    This module contains a set of function to perform salary predictions project.
 """
 
 import os
@@ -24,7 +24,7 @@ from sklearn.metrics import root_mean_squared_error, mean_absolute_error, mean_s
 def banner(ban_char, nban_char, title=None):
     if not isinstance(ban_char, str) or len(ban_char) != 1:
         raise ValueError("ban_char must be a single character string.")
-    
+
     if not isinstance(nban_char, int) or nban_char <= 0:
         raise ValueError("nban_char must be a positive integer.")
 
@@ -168,10 +168,10 @@ def concatenate_results(X_test, y_test, predicted_label, predictions):
 def plot_fit_reg_line_with_predictions(df, target_name, ind_name, predictions, show_correlation=False):
     if target_name not in df.columns or ind_name not in df.columns:
         raise ValueError(f"Columns {target_name} and/or {ind_name} not found in the dataset.")
-    
+
     plt.figure(figsize=(10, 6))
     sns.regplot(x=df[ind_name], y=df[target_name], ci=None, scatter_kws={'alpha':0.5}, label='Actual')
-    
+
     # Overlay the predicted values
     plt.scatter(df[ind_name], df[predictions], color='red', alpha=0.5, label='Predicted')
 
