@@ -1,0 +1,4 @@
+# This ignore file is specific to adult project
+
+data/
+get_help.ipynb
